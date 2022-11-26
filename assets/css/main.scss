@@ -910,7 +910,7 @@ h1, h2, h3, h4, h5, h6, p {
     @media screen and (max-width: 767px) {
       grid-template-columns: unset;
       grid-template-rows: repeat(4, max-content);
-      height: calc(100vh - 100px);
+      height: calc(100vh - 140px);
       @include spacing("margin", "bottom", 5);
       row-gap: unset;
       align-items: flex-end;
