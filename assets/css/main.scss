@@ -230,6 +230,7 @@ h1, h2, h3, h4, h5, h6, p {
         flex-direction: column;
         top: 0;
         width: 68vw;
+        z-index: 1;
         height: 100vh;
         box-sizing: border-box;
         @include spacing("padding", "all", 4);
