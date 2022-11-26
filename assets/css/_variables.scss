@@ -1,0 +1,87 @@
+@import "fonts";
+
+$font_Bellefair: "Bellefair", Georgia, serif;
+$font_BarlowCondensed: "Barlow Condensed", Helvetica, sans-serif;
+
+$colors: (
+  rich_black: hsl(230, 35%, 7%),
+  lavender_blue: hsl(231, 77%, 90%),
+  white: hsl(0, 0%, 100%)
+);
+
+@mixin font($fontName, $variant) {
+  @if $fontName == "Bellefair" {
+    font-family: $font_Bellefair;
+  } @else if $fontName == "Barlow" {
+    font-family: $font_BarlowCondensed;
+  } @else {
+    font-family: $font_Bellefair;
+  }
+  @if $variant == "h1" {
+    font-size: 150px;
+  } @else if $variant == "h2" {
+    font-size: 100px;
+  } @else if $variant == "h3" {
+    font-size: 56px;
+  } @else if $variant == "h4" {
+    font-size: 32px;
+  } @else if $variant == "h5" {
+    font-size: 28px;
+    letter-spacing: 4.75px;
+  } @else if $variant == "sub_heading1" {
+    font-size: 28px;
+  } @else if $variant == "sub_heading2" {
+    font-size: 14px;
+    letter-spacing: 2.35px;
+  } @else if $variant == "nav_text" {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  } @else if $variant == "body" {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+@mixin spacing($type, $dir, $space) {
+  @if $type == "padding" {
+    @for $var from 0 to 30 {
+      @if $space == $var {
+        @if $dir == "left" {
+          padding-left: calc(8px * $var);
+        } @else if $dir == "top" {
+          padding-top: calc(8px * $var);
+        } @else if $dir == "right" {
+          padding-right: calc(8px * $var);
+        } @else if $dir == "bottom" {
+          padding-bottom: calc(8px * $var);
+        } @else if $dir == "horizontal" {
+          padding: 0 calc(8px * $var);
+        } @else if $dir == "vertical" {
+          padding: calc(8px * $var) 0;
+        } @else if $dir == "all" {
+          padding: calc(8px * $var);
+        }
+      }
+    }
+  } @else if $type == "margin" {
+    @for $var from 1 to 30 {
+      @if $space == $var {
+        @if $dir == "left" {
+          margin-left: calc(8px * $var);
+        } @else if $dir == "top" {
+          margin-top: calc(8px * $var);
+        } @else if $dir == "right" {
+          margin-right: calc(8px * $var);
+        } @else if $dir == "bottom" {
+          margin-bottom: calc(8px * $var);
+        } @else if $dir == "horizontal" {
+          margin: 0 calc(8px * $var);
+        } @else if $dir == "vertical" {
+          margin: calc(8px * $var) 0;
+        } @else if $dir == "all" {
+          margin: calc(8px * $var);
+        }
+      }
+    }
+  }
+}
