@@ -1048,6 +1048,7 @@ h1, h2, h3, h4, h5, h6, p {
         width: 80px;
         height: 80px;
         box-sizing: border-box;
+        cursor: pointer;
         border-radius: 50%;
         border:  solid 1px rgba($color: map-get($colors, white), $alpha: 0.5);
         transition: border-color 0.30s ease-in-out, background-color 0.30s ease-in-out;
